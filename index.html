@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Timer</title>
+    <link rel="icon" href="icon/timer.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu">
+        <ul class="menu">
+            <li><a class="menuIcon"><img src="icon/menu.png" class="menuIcon"></a></li>
+            <li><a class="timer menu first active">Timer</a></li>
+            <li><a class="stopWatch menu">Stopwatch</a></li>
+            <li><a class="ageCalculation menu">Age calculation</a></li>
+        </ul>
+    </div>
+
+    <div class="timer">
+        <div class="emptyDiv"></div>
+        <div class="timerDisplay">
+            <h1 id="timerHour" class="timerDisplay">00</h1>
+            <h1 class="colonTimerDisplay">:</h1>
+            <h1 id="timerMinute" class="timerDisplay">02</h1>
+            <h1 class="colonTimerDisplay">:</h1>
+            <h1 id="timerSecond" class="timerDisplay">00</h1>
+            <div class="editTimerDiv">
+                <button id="editTimerBtn">edit</button>
+            </div>
+        </div>
+        <div class="timerButtons">
+            <button id="startTimerBtn" class="timerButtons">start</button>
+            <button id="pauseTimerBtn" class="timerButtons hidden">pause</button>
+            <button id="resetTimerBtn" class="timerButtons">reset</button>
+        </div>
+        <div class="getTimePage hidden">
+            <label class="labelInputGetTimer">Hours:&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="hourInputGetTime" class="inputGetTimeTimer" value="" placeholder="0">
+            <br/>
+            <br/>
+            <label class="labelInputGetTimer">Minutes:</label>
+            <input type="number" id="minuteInputGetTime" class="inputGetTimeTimer" value="" placeholder="0">
+            <br/>
+            <br/>
+            <label class="labelInputGetTimer">Seconds:</label>
+            <input type="number" id="secondInputGetTime" class="inputGetTimeTimer" value="" placeholder="0">
+            <br/>
+            <br/>
+            <input type="button" value="ok" id="getTimeBtn" class="inputGetTimeTimer">
+        </div>
+        <div class="showFinishMessage">
+            <p class="showFinishMessage">Finish</p>
+        </div> 
+    </div>
+
+    <div class="stopwatch hidden">
+        <div class="stopWatchDisplay">
+            <h1 id="stopWatchHour" class="stopWatchDisplay">00</h1>
+            <h1 class="colonStopWatchDisplay">:</h1>
+            <h1 id="stopWatchMinute" class="stopWatchDisplay">00</h1>
+            <h1 class="colonStopWatchDisplay">:</h1>
+            <h1 id="stopWatchSecond" class="stopWatchDisplay">00</h1>
+        </div>
+        <div class="stopWatchButtons">
+            <button id="startStopWatchBtn" class="stopWatchButtons">start</button>
+            <button id="pauseStopWatchBtn" class="stopWatchButtons hidden">pause</button>
+            <button id="resetStopWatchBtn" class="stopWatchButtons">reset</button>
+            <button id="splitStopWatchBtn" class="stopWatchButtons hidden">split</button>
+        </div>
+        <div id="table-wrapper">
+            <div id="table-scroll">
+              <table class="tableRecords">
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="AgeCalculation hidden">
+        <div class="getDateBirthDayMain">
+            <div class="getDateBirthDay">
+                <div class="getDateBirthDayHeader">
+                    <h1 class="AgeCalculation">Date of Birth</h1>
+                </div>
+                <div class= "getDateBirthDayRadioInput">
+                    <label class="lableGetDateBirth">
+                        <input type="radio" name="dateRadio" id="adRadio" class="getDateBirthRadio" value="ad" checked>
+                        AD
+                    </label>
+                    <label class="lableGetDateBirth">
+                        <input type="radio" name="dateRadio" id="shRadio" class="getDateBirthRadio" value="sh">
+                        SH
+                    </label>
+                </div>
+                <div class="getDateBirthDayNumberInput">
+                    <input type="number" id="getTimeAgeCalculationYearInput" class="getTimeAgeCalculationInput" placeholder="Year">
+                    <select name="monthAd" id="selectMonthAgeCalculationAd" class="selectMonthAgeCalculation getTimeAgeCalculationInput">
+                        <option class="optionSelectAgeCalculation" value="0" selected hidden>Month</option>
+                        <option class="optionSelectAgeCalculation" value="1">January</option>
+                        <option class="optionSelectAgeCalculation" value="2">February</option>
+                        <option class="optionSelectAgeCalculation" value="3 ">March </option>
+                        <option class="optionSelectAgeCalculation" value="4">April</option>
+                        <option class="optionSelectAgeCalculation" value="5">May</option>
+                        <option class="optionSelectAgeCalculation" value="6">June</option>
+                        <option class="optionSelectAgeCalculation" value="7">July</option>
+                        <option class="optionSelectAgeCalculation" value="8">August</option>
+                        <option class="optionSelectAgeCalculation" value="9">September</option>
+                        <option class="optionSelectAgeCalculation" value="10">October</option>
+                        <option class="optionSelectAgeCalculation" value="11">November</option>
+                        <option class="optionSelectAgeCalculation" value="12">December</option>
+                    </select>
+                    <select name="monthSh" id="selectMonthAgeCalculationSh" class="selectMonthAgeCalculation getTimeAgeCalculationInput hidden">
+                        <option class="optionSelectAgeCalculation" value="0" selected hidden>Month</option>
+                        <option class="optionSelectAgeCalculation" value="1">Farvardin</option>
+                        <option class="optionSelectAgeCalculation" value="2">Ordibehesht</option>
+                        <option class="optionSelectAgeCalculation" value="3 ">Khordad </option>
+                        <option class="optionSelectAgeCalculation" value="4">Tir</option>
+                        <option class="optionSelectAgeCalculation" value="5">Mordad</option>
+                        <option class="optionSelectAgeCalculation" value="6">Shahrivar</option>
+                        <option class="optionSelectAgeCalculation" value="7">Mehr</option>
+                        <option class="optionSelectAgeCalculation" value="8">Aban</option>
+                        <option class="optionSelectAgeCalculation" value="9">Azar</option>
+                        <option class="optionSelectAgeCalculation" value="10">Day</option>
+                        <option class="optionSelectAgeCalculation" value="11">Bahman</option>
+                        <option class="optionSelectAgeCalculation" value="12">Esfand</option>
+                    </select>
+                    <input type="number" id="getTimeAgeCalculationDayInput" class="getTimeAgeCalculationInput" placeholder="Day">
+                </div>
+                <div class="getDateBirthDayButtonInput">
+                    <input type="button" id="getDateBirthDayRegisterBtn" class="getTimeAgeCalculationInput" value="ok">
+                </div>
+            </div>
+        </div>
+            <div class="showAge hidden">
+                <div class="showAgeHeader">
+                    <h1 class="showAgeHeader">Your Age</h1>
+                </div>
+                <div class="showAgeDisplay">
+                    <div class="partionShowAge">
+                        <h1 class="showAge" id="showYearAge"></h1>
+                        <label class="showAge">Years</label>
+                    </div>
+                    <div class="partionShowAge">
+                        <h1 class="showAge" id="showMonthAge"></h1>
+                        <label class="showAge">Months</label>
+                    </div>
+                    <div class="partionShowAge">
+                        <h1 class="showAge" id="showDayAge"></h1>
+                        <label class="showAge">Days</label>
+                    </div>
+                </div>
+                <div class="backCalculatioAgeDiv">
+                    <input type="button" id="backCalculatioAgeBtn" value="back">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const viewport = document.querySelector("meta[name=viewport]");
+        addEventListener("load", setViewport);
+        function setViewport() {
+            viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+        }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
