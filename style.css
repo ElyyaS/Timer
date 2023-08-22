@@ -48,10 +48,6 @@ img.menuIcon {
     height: 40px;
 }
 
-@media screen and (max-width: 414px) {
-
-}
-
 @media screen and (max-width: 545px) {
 
     div.menu {
@@ -320,6 +316,19 @@ p.showFinishMessage {
     p.showFinishMessage {
         font-size: 200%;
     }
+}
+
+@media screen and (max-width: 360px) {
+
+    h1.timerDisplay {
+        font-size: 420%;
+    }
+
+    h1.colonTimerDisplay {
+        font-size: 380%;
+    }
+    
+
 }
 
 @media screen and (max-height: 780px) {
@@ -868,6 +877,15 @@ div.backCalculatioAgeDiv {
         height: 85px;
     }
     
+}
+
+@media screen and (max-width: 360px) {
+
+    input[type="button"].getTimeAgeCalculationInput {
+        width: 4rem;
+        height: 4rem;
+    }
+
 }
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
