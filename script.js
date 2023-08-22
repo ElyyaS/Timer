@@ -78,7 +78,7 @@ function openCloseMenu() {
     ageCalculationBtn.classList.toggle("openMenu");
 }
 
-// timer ****************************************************************************************************
+// Timer ****************************************************************************************************
 
 const timerDisplay = document.querySelector("div.timerDisplay");
 const editTimerDiv = document.querySelector("div.editTimerDiv")
@@ -260,7 +260,7 @@ function hideFinishMessage() {
     showFinishMessage.classList.remove("finish");
 }
 
-// stopWatch ************************************************************************************************
+// StopWatch ************************************************************************************************
 
 const stopWatchDisplay = document.querySelector(".stopWatchDisplay");
 const stopWatchButtons = document.querySelector(".stopWatchButtons");
@@ -413,7 +413,7 @@ function setStopWatch() {
     stopWatchSecondDisplay.innerHTML = (stopWatchSecond < 10) ? "0" + stopWatchSecond : stopWatchSecond;
 }
 
-// age calculation ********************************************************************************************
+// Age calculation ********************************************************************************************
 
 const AgeCalculationMain = document.querySelector("div.AgeCalculation");
 const getDateBirthDayMain = document.querySelector("div.getDateBirthDayMain");
