@@ -619,8 +619,14 @@ function calculateAge(){
             if (currentDaySh >= birthDaySh) {
                 resultDaySh = currentDaySh - birthDaySh;
             } else {
-                resultDaySh =  birthDaySh - currentDaySh;
-                resultMonthSh -= 1;
+                resultDaySh = 30 - (birthDaySh - currentDaySh);
+
+                if (resultMonthSh == 0) {
+                    resultMonthSh = 11;
+                    resultYearSh -= 1;
+                } else {
+                    resultMonthSh -= 1;
+                }
             }
 
             showYearAge.innerHTML = resultYearSh;
